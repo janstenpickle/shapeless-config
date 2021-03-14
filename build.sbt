@@ -1,8 +1,8 @@
 import microsites._
 import sbt.Keys.libraryDependencies
 
-val catsVer = "2.0.0"
-val catsEffectVer = "2.0.0"
+val catsVer = "2.4.2"
+val catsEffectVer = "2.3.3"
 val circeVer = "0.12.1"
 val collectionCompatVer = "2.1.2"
 val disciplineScalaTestVer = "1.0.0-RC1"
@@ -35,8 +35,8 @@ lazy val macroSettings: Seq[Setting[_]] = Seq(
 
 lazy val commonSettings: Seq[Setting[_]] = Seq(
   organization := "io.extruder",
-  scalaVersion := "2.13.1",
-  crossScalaVersions := Seq("2.12.10", "2.13.1"),
+  scalaVersion := "2.13.5",
+  crossScalaVersions := Seq("2.12.13", "2.13.5"),
   addCompilerPlugin(("org.typelevel" % "kind-projector" % "0.11.0").cross(CrossVersion.patch)),
   scalacOptions ++= Seq(
     "-deprecation",

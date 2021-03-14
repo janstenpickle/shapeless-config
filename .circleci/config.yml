@@ -23,33 +23,33 @@ jobs:
     docker:
       - image: circleci/openjdk:11-jdk
     environment:
-      SCALA_VERSION: 2.12.10
+      SCALA_VERSION: 2.12.13
       COVERAGE: true
   build_212_JDK8:
     <<: *base
     docker:
       - image: circleci/openjdk:8-jdk
     environment:
-      SCALA_VERSION: 2.12.10
+      SCALA_VERSION: 2.12.13
       COVERAGE: true
   build_213_JDK11:
     <<: *base
     docker:
       - image: circleci/openjdk:11-jdk
     environment:
-      SCALA_VERSION: 2.13.1
+      SCALA_VERSION: 2.13.5
   build_213_JDK8:
     <<: *base
     docker:
       - image: circleci/openjdk:8-jdk
     environment:
-      SCALA_VERSION: 2.13.1
+      SCALA_VERSION: 2.13.5
   docs:
     <<: *base
     docker:
       - image: circleci/openjdk:11-jdk
     environment:
-      SCALA_VERSION: 2.12.10
+      SCALA_VERSION: 2.12.13
     steps:
       - checkout
       - restore_cache:
@@ -69,7 +69,7 @@ jobs:
     docker:
     - image: circleci/openjdk:11-jdk
     environment:
-      SCALA_VERSION: 2.12.10
+      SCALA_VERSION: 2.12.13
     steps:
       - checkout
       - run: git fetch --tags
@@ -79,7 +79,7 @@ jobs:
     docker:
     - image: circleci/openjdk:11-jdk
     environment:
-      SCALA_VERSION: 2.13.1
+      SCALA_VERSION: 2.13.5
     steps:
       - checkout
       - run: git fetch --tags
@@ -89,7 +89,7 @@ jobs:
     docker:
       - image: circleci/openjdk:11-jdk
     environment:
-      SCALA_VERSION: 2.12.10
+      SCALA_VERSION: 2.12.13
     steps:
       - checkout
       - run: git fetch --tags
@@ -102,7 +102,7 @@ jobs:
     docker:
     - image: circleci/openjdk:11-jdk
     environment:
-      SCALA_VERSION: 2.13.1
+      SCALA_VERSION: 2.13.5
     steps:
       - checkout
       - run: git fetch --tags
