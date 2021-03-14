@@ -35,9 +35,9 @@ lazy val macroSettings: Seq[Setting[_]] = Seq(
 
 lazy val commonSettings: Seq[Setting[_]] = Seq(
   organization := "io.extruder",
-  scalaVersion := "2.13.1",
-  crossScalaVersions := Seq("2.12.10", "2.13.1"),
-  addCompilerPlugin(("org.typelevel" % "kind-projector" % "0.11.0").cross(CrossVersion.patch)),
+  scalaVersion := "2.13.5",
+  crossScalaVersions := Seq("2.12.13", "2.13.5"),
+  addCompilerPlugin(("org.typelevel" % "kind-projector" % "0.11.3").cross(CrossVersion.patch)),
   scalacOptions ++= Seq(
     "-deprecation",
     "-unchecked",
